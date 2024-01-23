@@ -1,0 +1,199 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    /* Raleway yazı tipi kullanımı */
+    background-color: #f2f2f2;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.voucher {
+    background-color: #fff;
+    width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #007bff21;
+    color: #fff;
+    padding: 10px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.content {
+    margin-top: 5px;
+    padding: 20px;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-size: 14px;
+    align-content: center;
+}
+
+.conditions {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.conditions h4 {
+    font-size: 14px;
+    margin-top: -2px;
+    margin-bottom: -1px;
+}
+
+.conditions .baslik {
+    font-size: 14px;
+    margin-top: -12px;
+    margin-bottom: 2px;
+}
+
+.conditions h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.conditions p {
+    font-size: 14px;
+}
+
+.signature {
+    margin-top: 20px;
+    display: flex;
+    /* Yan yana yerleştirme için */
+    justify-content: space-between;
+    /* Aralarında boşluk bırakma */
+}
+
+.signature .agent,
+.signature .customer {
+    width: 48%;
+    /* İmza alanlarını eşit genişlikte yapma */
+    text-align: center;
+}
+
+
+/* Tablo stilleri */
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    font-size: 12px !important;
+    margin-left: 10%;
+    margin-bottom: -25px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 4px;
+    text-align: center;
+}
+
+
+/* Tablo başlığı stilleri */
+
+th {
+    background-color: #ffffff !important;
+}
+
+
+/* İlk satır (başlık) stilleri */
+
+tr:first-child {
+    background-color: #ffffff !important;
+    text-align: center;
+}
+
+
+/* Satır aralarındaki renk değişimi */
+
+tr:nth-child(even) {
+    background-color: #ffffff !important;
+    text-align: center;
+}
+
+
+/* Tablo içeriği */
+
+td {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Tablo içeriği hücreleri için sağa hizalama */
+
+td:nth-child(2),
+td:nth-child(3) {
+    text-align: center;
+}
+
+.customer-table {
+    width: 80% !important;
+    font-size: 10px;
+    margin-left: 10%;
+}
+
+
+/* PDF çıktısı için CSS */
+
+@media print {
+    @page {
+        size: 85% !important;
+        margin: 0;
+    }
+    body {
+        margin: 0.3cm;
+        font-size: 10px;
+        /* PDF çıktısında daha küçük bir yazı tipi */
+    }
+    .voucher {
+        width: 100%;
+        /* Sayfa genişliğinde yerleştirme */
+    }
+    .header img {
+        max-width: 70%;
+        /* Logoyu küçültme */
+    }
+    .content {
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+    .voucher-kes {
+        page-break-before: auto !important;
+    }
+    .conditions {
+        /* Her koşul başlangıcında sayfa kesme */
+        font-size: 10px;
+        /* Yazdırılan PDF'deki yazı tipi boyutu */
+        margin: 10px;
+        /* Sayfa kenar boşlukları */
+    }
+    .conditions h3 {
+        font-size: 14px;
+        /* Başlık boyutu */
+    }
+    .conditions h4 {
+        font-size: 12px;
+        /* Alt başlık boyutu */
+    }
+    .conditions p {
+        font-size: 9px;
+        text-align: justify;
+        /* Metni yasla */
+        margin: 1px 0;
+        /* Metin aralığı */
+    }
+}

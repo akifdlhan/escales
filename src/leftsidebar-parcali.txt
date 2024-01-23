@@ -1,0 +1,104 @@
+<li class="dropdown notification-list topbar-dropdown">
+                    <a class="nav-link dropdown-toggle waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="fe-bell noti-icon"></i>
+                        <?php
+                        if(0 > 0){
+                            echo '<span class="badge bg-danger rounded-circle noti-icon-badge"> 1 </span>';
+                        }else{
+                            echo ' ';
+                        }
+                        ?>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-lg">
+
+                        <!-- item-->
+                        <div class="dropdown-item noti-title">
+                            <h5 class="m-0">
+                                <span class="float-end">
+                                    <a href="" class="text-dark">
+                                        <small>Tümünü Temizle</small>
+                                    </a>
+                                </span>Bildirimler
+                            </h5>
+                        </div>
+
+                        <div class="noti-scroll" data-simplebar>
+                        <?php 
+                            for($i=0;$i<=20;$i++){
+                                ?>
+                                 <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                <div class="notify-icon">
+                                    <img src="../assets/images/users/user-1.jpg" class="img-fluid rounded-circle" alt="" />
+                                </div>
+                                <p class="notify-details"><?php echo $kullanici; ?></p>
+                                <p class="text-muted mb-0 user-msg">
+                                    <small>Hi, How are you? What about our next meeting</small>
+                                </p>
+                            </a>
+                                <?php
+                            }
+                        ?>
+                        </div>
+
+                    </div>
+                </li>
+
+
+                ## ARAMA KISIMI ##
+
+                <li class="d-none d-lg-block">
+                    <form class="app-search">
+                        <div class="app-search-box">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Ara..." id="top-search">
+                                <button class="btn input-group-text" type="submit">
+                                    <i class="fe-search"></i>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu dropdown-lg" id="search-dropdown">
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h5 class="text-overflow mb-2">Found 22 results</h5>
+                                </div>
+    
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <i class="fe-home me-1"></i>
+                                    <span>Analytics Report</span>
+                                </a>
+
+                                <!-- item-->
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow mb-2 text-uppercase">Users</h6>
+                                </div>
+
+                                <div class="notification-list">
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="d-flex align-items-start">
+                                            <img class="d-flex me-2 rounded-circle" src="../assets/images/users/user-2.jpg" alt="Generic placeholder image" height="32">
+                                            <div class="w-100">
+                                                <h5 class="m-0 font-14">Erwin E. Brown</h5>
+                                                <span class="font-12 mb-0">UI Designer</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    
+                                </div>
+    
+                            </div> 
+                        </div>
+                    </form>
+                </li>
+
+                <li class="dropdown d-inline-block d-lg-none">
+                    <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <i class="fe-search noti-icon"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-lg dropdown-menu-end p-0">
+                        <form class="p-3">
+                            <input type="text" class="form-control" placeholder="Ara ..." aria-label="Recipient's username">
+                        </form>
+                    </div>
+                </li>

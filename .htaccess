@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# .php uzantısını .fi olarak göster
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+)\.php [NC]
+RewriteRule ^ /%1.fi [R=302,L]
+
+# .fi uzantısını .php'ye yönlendir
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)\.fi$ $1.php [NC,L]
+
+# 404 yönlendirmesi
+ErrorDocument 404 /my/src/404.php

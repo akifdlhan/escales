@@ -1,0 +1,54 @@
+body {
+    font-family: Raleway;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    max-width: 100px;
+}
+
+.header h2 {
+    font-weight: bold;
+}
+
+.content {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.info p,
+.details p {
+    font-weight: normal;
+}
+
+.payment p {
+    font-weight: normal;
+}
+
+.bank-info {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.bank-info p {
+    font-weight: bold;
+}
+
+.signature {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.signature p {
+    font-weight: bold;
+}

@@ -1,0 +1,1 @@
+$("#YetkiDuzenleButon").on("click",(function(){var e=$("#YetkiGrubu:checked").map((function(){return $(this).val()})).get().join(","),c="Toggle="+$("#AltMenuSw").is(":checked")+"&MenuID="+$("#MenuID").val()+"&access="+e;$.ajax({url:"../settings/access-last-process.fi",type:"POST",data:c,success:function(e){$("div#AccessEdit").html("").html(e)}})}));
