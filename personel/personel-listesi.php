@@ -28,7 +28,7 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $fimy_personel = $vt ->listele("fimy_personel","ORDER BY UD DESC");
+                                        $fimy_personel = $vt ->listele("fimy_personel","ORDER BY ID DESC");
                                         if($fimy_personel!=null) foreach($fimy_personel as $personel){
                                             echo '
                                             <tr>
@@ -42,11 +42,11 @@
                                             <td>'.$personel['Soyadi'].'</td>
                                             <td>'.$personel['Telefon'].'</td>
                                             <td>'.$personel['Cinsiyet'].'</td>
-                                            <td>'.$persoenel['Departman'].'</td>
-                                            <td>'.$persoenel['Adres'].'</td>
-                                            <td>'.$persoenel['Il'].'</td>
-                                            <td>'.$persoenel['Ilce'].'</td>
-                                            <td>'.$persoenel['BaslamaTarihi'].'</td>
+                                            <td>'.$personel['Departman'].'</td>
+                                            <td>'.$personel['Adres'].'</td>
+                                            <td>'.$personel['Il'].'</td>
+                                            <td>'.$personel['Ilce'].'</td>
+                                            <td>'.$personel['BaslamaTarihi'].'</td>
                                             </rt>';
                                         }
 
