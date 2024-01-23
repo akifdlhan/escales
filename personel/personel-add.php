@@ -3,7 +3,7 @@ include("../src/iconlibrary.php");
 $vt = new veritabani();
 extract($_POST);
 if ($_POST) {
-    $Tc = isset($_POST['Tc']) ? $_POST['Tc'] : '';
+    $TC = isset($_POST['TC']) ? $_POST['TC'] : '';
     $Adi = isset($_POST['Adi']) ? $_POST['Adi'] : '';
     $Soyad = isset($_POST['Soyad']) ? $_POST['Soyad'] : '';
     $Telefon = isset($_POST['Telefon']) ? $_POST['Telefon'] : '';  
@@ -15,7 +15,7 @@ if ($_POST) {
     $BaslamaTarihi = isset($_POST['BaslamaTarihi']) ? $_POST['BaslamaTarihi'] : '';
     
     $fimy_personel = $vt->ekle("fimy_personel", array(
-        "Tc" => $Tc,
+        "TC" => $TC,
         "Adi" => $Adi,
         "Soyadi" => $Soyad,
         "Telefon" => $Telefon,

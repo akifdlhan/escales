@@ -44,45 +44,41 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
-                            <h5>Personel Bilgiler</h5>
+                                <h5>Personel Bilgiler</h5>
                                 <div class="col-lg-6">
-
-                                <label for="Tc">TC</label>
-                                <input class="form-control" placeholder="Tc" id="Tc" required type="text">
+                                    <label for="TC">TC</label>
+                                    <input class="form-control" placeholder="TC" id="TC" name="TC" required type="text">
                                 </div>
                                 <div class="col-lg-8"></div>
                                 <div class="col-lg-6">
-                                <label for="Adi"><p class="mg-b-10" style="margin-top:2px;">Adı</p></label>
-                                <input type="text" placeholder="Adı" name="Adi" id="Adi" class="form-control" required>
+                                    <label for="Adi"><p class="mg-b-10" style="margin-top:2px;">Adı</p></label>
+                                    <input type="text" placeholder="Adı" name="Adi" id="Adi" class="form-control" required>
                                 </div>
                                 <div class="col-lg-6">
-                                <label for="Soyadi"><p class="mg-b-10" style="margin-top:2px;">Soyadı</p></label>
-                                <input type="text" name="Soyadi" placeholder="Soyadı" id="Soyadi" class="form-control">
+                                    <label for="Soyadi"><p class="mg-b-10" style="margin-top:2px;">Soyadı</p></label>
+                                    <input type="text" name="Soyadi" placeholder="Soyadı" id="Soyadi" class="form-control">
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="Telefon"><p class="mg-b-10" style="margin-top:2px;">Telefon</p></label>
-                                    <input type="text" name="Telefon" class="form-control" placeholder="(000)000-0000" id="Telefon" required >
+                                    <input type="text" name="Telefon" class="form-control" placeholder="(000)000-0000" id="Telefon" required>
                                 </div>
-                                <br>
                                 <div class="col-lg-6">
-                                <label for="Cinsiyet"><p class="mg-b-10" style="margin-top:2px;">Cinsiyet</p></label>
-                                <select class="form-control" id="Cinsiyet" name="Cinsiyet">
-                                    <option value="Erkek">Erkek</option>
-                                    <option value="Kadın">Kadın</option>
-                                </select><br>
-                              </div>
-                              <div class="col-lg-6">
-                              <label for="Departman" class="form-label" for="Departman">Departman</label>
-                              <input class="form-control" placeholder="Departman" id="Departman" required type="text">
-                            </div>
-                            <div class="col-lg-3">
-                                        <label for="BaslamaTarihi" class="form-label" for="BaslamaTarihi">Başlama Tarihi:</label>
-                                            
-                                        <input type="text" id="BaslamaTarihi" class="form-control"
-                                            placeholder="BaslamaTarihi">
-                                    </div>
+                                    <label for="Cinsiyet"><p class="mg-b-10" style="margin-top:2px;">Cinsiyet</p></label>
+                                    <select class="form-control" id="Cinsiyet" name="Cinsiyet">
+                                        <option value="Erkek">Erkek</option>
+                                        <option value="Kadın">Kadın</option>
+                                    </select><br>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="Departman" class="form-label" for="Departman">Departman</label>
+                                    <input class="form-control" placeholder="Departman" id="Departman" required type="text">
+                                </div>
+                                <div class="col-lg-3">
+                                    <label for="BaslamaTarihi" class="form-label" for="BaslamaTarihi">Başlama Tarihi:</label>
+                                    <input type="text" id="BaslamaTarihi" class="form-control" placeholder="BaslamaTarihi">
+                                </div>
 
-                                    <div class="row row-sm">
+                                <div class="row row-sm">
                                     <div class="col-lg-12">
                                         <div class="az-content-label mg-b-5">
                                             <h5>Adres Bilgileri</h5>
@@ -116,11 +112,11 @@
                                         <div class="form-group has-success mg-b-0">
                                             <p class="mg-b-10" style="margin-top:5px;">
                                                 <label for="Adres">Adres:</label>
-                                                <textarea class="form-control" rows="3" placeholder="Adres" id="Adres"
-                                                    name="Adres" required type="text"></textarea>
+                                                <textarea class="form-control" rows="3" placeholder="Adres" id="Adres" name="Adres" required type="text"></textarea>
                                         </div>
                                     </div>
                                     <input type="button" value="Kaydet" id="submitButton" class="scroll-button" name="button">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,8 +142,6 @@
                 </style>
             </div>
 
-
-
             <script>
                 flatpickr("#BaslamaTarihi", {
                     maxDate: "today",
@@ -156,7 +150,7 @@
 
                 $(document).ready(function () {
                     $("#submitButton").click(function () {
-                        var Tc = $("#Tc").val().trim();
+                        var TC = $("#TC").val().trim();
                         var Adi = $("#Adi").val().trim();
                         var Soyad = $("#Soyadi").val().trim();
                         var Telefon = $("#Telefon").val().trim();
@@ -167,13 +161,13 @@
                         var ilce = $("#ilce").val().trim();
                         var BaslamaTarihi = $("#BaslamaTarihi").val().trim();
 
-                        if (Tc === '' || Adi === '' || Soyad === '' || Departman === '' || BaslamaTarihi === '') {
+                        if (TC === '' || Adi === '' || Soyad === '' || Departman === '' || BaslamaTarihi === '') {
                             alert("TC, Ad, Soyad, Departman ve Başlama Tarihi alanları doldurmak zorundasınız");
                             return;
                         }
 
                         var formData = {
-                            Tc: Tc,
+                            TC: TC,
                             Adi: Adi,
                             Soyad: Soyad,
                             Telefon: Telefon,
@@ -184,16 +178,16 @@
                             ilce: ilce,
                             BaslamaTarihi: BaslamaTarihi
                         };
-                        //console.log(formData);
-
 
                         $.ajax({
                             url: 'personel-add.fi',
                             type: 'POST',
-                            data: Tc,
-                            success: function (e) {
-                                alert(e);
-
+                            data: formData, // Tüm form verilerini gönderiyoruz
+                            success: function (response) {
+                                alert(response);
+                            },
+                            error: function (xhr, status, error) {
+                                alert("Ajax isteği sırasında bir hata oluştu: " + error);
                             }
                         });
                     });
@@ -212,9 +206,6 @@
                         });
                     });
                 });
-                
-                
             </script>
-
 
             <?php include("../src/footer-alt.php"); ?>
