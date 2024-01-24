@@ -31,13 +31,16 @@
                                         <?php
                                         $fimy_personel = $vt->listele("fimy_personel", "ORDER BY ID DESC");
                                         if ($fimy_personel != null) foreach ($fimy_personel as $personel) {
+                                            // Display "Erkek" if cinsiyet is 0, "Kız" if cinsiyet is 2
+                                            $cinsiyetLabel = ($personel['Cinsiyet'] == 0) ? 'Erkek' : 'Kız';
+
                                             echo '
                                             <tr>
                                             <td>' . $personel['TC'] . '</td>
                                             <td>' . $personel['Adi'] . '</td>
                                             <td>' . $personel['Soyadi'] . '</td>
                                             <td>' . $personel['Telefon'] . '</td>
-                                            <td>' . $personel['Cinsiyet'] . '</td>
+                                            <td>' . $cinsiyetLabel . '</td>
                                             <td>' . $personel['Departman'] . '</td>
                                             <td>' . $personel['Adres'] . '</td>
                                             <td>' . $personel['Il'] . '</td>
