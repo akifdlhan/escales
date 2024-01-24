@@ -149,6 +149,17 @@
                 });
 
                 $(document).ready(function () {
+                    $('#TC').on('input', function () {
+                        this.value = this.value.replace(/[^0-9]/g, '');
+                    });
+
+                    $('#Telefon').on('input', function () {
+                        this.value = this.value.replace(/[^0-9]/g, '');
+
+                    if (this.value.length === 1 && this.value === '0') {
+                        this.value = '';
+                    }
+                    });
                     $("#submitButton").click(function () {
                         var TC = $("#TC").val().trim();
                         var Adi = $("#Adi").val().trim();
